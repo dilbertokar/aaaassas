@@ -1,6 +1,7 @@
 package com.example.dilber.excelsior;
 
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 public class TestActivity extends AppCompatActivity implements View.OnClickListener {
 
 
+    static Product oneri;
     TextView textView;
     TextView cevap1;
     TextView cevap2;
@@ -43,6 +45,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        counter=0;
         setContentView(R.layout.activity_test);
         soruList.add(soru1);
         soruList.add(soru2);
@@ -68,11 +71,6 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         cevap5.setOnClickListener(this);
 
         setQuestion();
-
-
-
-
-
     }
 
 void setQuestion(){
@@ -91,13 +89,41 @@ void setQuestion(){
 }
     @Override
     public void onClick(View v) {
+        TextView t=(TextView) v;
+        if(soruList.get(counter).cevap1==t.getText())     {result+=counter;}
+        else if(soruList.get(counter).cevap2==t.getText()){result+=counter*2;}
+        else if(soruList.get(counter).cevap3==t.getText()){result+=counter*3;}
+        else if(soruList.get(counter).cevap4==t.getText()){result+=counter*4;}
+        else if(soruList.get(counter).cevap5==t.getText()){result+=counter*5;}
+
             counter++;
-            if(counter>soruList.size())
+            if(counter>=soruList.size())
                 showResult();
+            else
            setQuestion();
     }
     void showResult()
     {
+        switch (result%5)
+        {
+            case 0:
+                oneri=UrunListe.productList.get(0);
+                break;
+            case 1:
+                oneri=UrunListe.productList.get(1);
+                break;
+            case 2:
+                oneri=UrunListe.productList.get(2);
+                break;
+            case 3:
+                oneri=UrunListe.productList.get(3);
+                break;
+            case 4:
+                oneri=UrunListe.productList.get(4);
+                break;
+        }
+        Intent i=new Intent(TestActivity.this,Oneri.class);
+        startActivity(i);
 
     }
 }

@@ -23,7 +23,14 @@
             android:name=".SepetActivity"
             android:label="@string/title_activity_sepet"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".Oneri">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
