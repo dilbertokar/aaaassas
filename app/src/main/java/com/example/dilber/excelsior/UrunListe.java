@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class UrunListe extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<Product> productList;
+    static ArrayList<Product> productList;
 
     ImageView sepeteekle;
     Button test;
@@ -47,6 +47,7 @@ public class UrunListe extends AppCompatActivity {
         productList.add(new Product(19, "Kolye", "78", R.drawable.kolye));
         productList.add(new Product(11, "Kalem", "78", R.drawable.kalem));
 
+        TestActivity.oneri=productList.get(0);
         ListAdapter adapter = new ListAdapter(productList);
 
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -56,7 +57,8 @@ public class UrunListe extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i=new Intent(UrunListe.this,TestActivity.class);
+                startActivity(i);
             }
         });
 
