@@ -33,7 +33,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     int counter=0;
     int result=0;
     String alici="Hediye alacağınız kişi";
-    Sorular soru1 = new Sorular(alici+"nin cinciyeti nedir?" ,
+    Sorular soru1 = new Sorular(alici+"nin cinsiyeti nedir?" ,
             "Kadın" , "Erkek",null,null,null);
     Sorular soru2 = new Sorular(alici+" ile nasıl bir ilişkiniz var?",
 
