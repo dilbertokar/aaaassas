@@ -1,13 +1,10 @@
 package com.example.dilber.excelsior;
 
-import android.opengl.Visibility;
-import android.support.constraint.ConstraintLayout;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,10 +26,17 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     CardView card5;
 
     int counter=0;
-    Sorular soru1 = new Sorular("Hediye alacağınız kişinin cinciyeti nedir?" ,
+    int result=0;
+    String alici="Hediye alacağınız kişi";
+    Sorular soru1 = new Sorular(alici+"nin cinciyeti nedir?" ,
             "Kadın" , "Erkek",null,null,null);
-    Sorular soru2 = new Sorular("Hediye alacağınız kişi ile nasıl bir ilişkiniz var?",
+    Sorular soru2 = new Sorular(alici+" ile nasıl bir ilişkiniz var?",
+
             "Sevgili/Eş","Arkadaş","Akraba","Öğretmen","Anne/Baba");
+    Sorular soru3 = new Sorular(alici+"nin yaş aralığı",
+            "14/18","18/24","35/44","45/65","65+");
+    Sorular soru4=new Sorular("Özel bir gün için mi alıyorsunuz",
+            "Evet","Hayır",null,null,null);
 
     ArrayList<Sorular> soruList = new ArrayList<>();
 
@@ -42,6 +46,8 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_test);
         soruList.add(soru1);
         soruList.add(soru2);
+        soruList.add(soru3);
+        soruList.add(soru4);
         textView=findViewById(R.id.soru);
         cevap1=findViewById(R.id.cevap1);
         cevap2=findViewById(R.id.cevap2);
@@ -82,14 +88,16 @@ void setQuestion(){
     card3.setVisibility(cevap3.getText()==""?View.INVISIBLE:View.VISIBLE);
     card4.setVisibility(cevap4.getText()==""?View.INVISIBLE:View.VISIBLE);
     card5.setVisibility(cevap5.getText()==""?View.INVISIBLE:View.VISIBLE);
-
-
 }
     @Override
     public void onClick(View v) {
             counter++;
+            if(counter>soruList.size())
+                showResult();
            setQuestion();
-
+    }
+    void showResult()
+    {
 
     }
 }

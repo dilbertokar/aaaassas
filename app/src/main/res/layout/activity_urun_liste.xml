@@ -18,8 +18,8 @@
         android:id="@+id/btntest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="466dp"
-        android:text="Aradığınız hediyeyi bulmaya yardımcı olabiliriz"/>
+        android:text="Aradığınız hediyeyi bulmaya yardımcı olabiliriz"
+        app:layout_constraintBottom_toBottomOf="parent"
+         />
 
 </android.support.constraint.ConstraintLayout>

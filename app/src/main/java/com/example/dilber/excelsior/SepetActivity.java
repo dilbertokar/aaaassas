@@ -1,5 +1,6 @@
 package com.example.dilber.excelsior;
 
+import android.database.DataSetObserver;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,8 +15,6 @@ public class SepetActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     static ArrayList<Product> sepetlist = new ArrayList<>();
     TextView toplam;
-    int toplamfiyat=0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +26,7 @@ public class SepetActivity extends AppCompatActivity {
         SepetAdapter adapter = new SepetAdapter(sepetlist);
 
         toplam = findViewById(R.id.toplam);
-
-        for(int a=0;a<sepetlist.size() ;a++){
-
-        }
-
+        toplam.setText("Toplam :"+adapter.toplamfiyat+"₺");
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
     }

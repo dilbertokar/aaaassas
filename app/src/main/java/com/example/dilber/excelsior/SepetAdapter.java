@@ -33,9 +33,13 @@ public class SepetAdapter extends RecyclerView.Adapter<SepetAdapter.ViewHolder> 
 
 
     ArrayList<Product> sepetlist = new ArrayList<>() ;
+    int toplamfiyat=0;
 
     public SepetAdapter(ArrayList<Product> productList) {
         this.sepetlist = productList;
+        for(Product p:sepetlist){
+            toplamfiyat+=Integer.parseInt(p.fiyat);
+        }
     }
 
     @Override
@@ -57,8 +61,11 @@ public class SepetAdapter extends RecyclerView.Adapter<SepetAdapter.ViewHolder> 
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int fiyat=Integer.parseInt(sepetlist.get(position).fiyat);
+                toplamfiyat-=fiyat;
                 sepetlist.remove(position);
                 notifyDataSetChanged();
+
             }
         });
 
