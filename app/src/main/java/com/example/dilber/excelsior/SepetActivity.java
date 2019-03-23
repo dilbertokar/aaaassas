@@ -45,7 +45,7 @@ public class SepetActivity extends AppCompatActivity {
                 Toast.makeText(v.getContext(), "Ödeme Gerçekleşti", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(SepetActivity.this,UrunListe.class);
                 startActivity(i);
-                
+
 
             }
         });

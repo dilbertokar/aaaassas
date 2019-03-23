@@ -36,16 +36,16 @@ public class UrunListe extends AppCompatActivity {
         sepeteekle = findViewById(R.id.basket);
 
         productList = new ArrayList<>();
-        productList.add(new Product(1, "Ayıcık", "5" , R.drawable.ayicik));
-        productList.add(new Product(2, "Çiçek", "78", R.drawable.cicek));
-        productList.add(new Product(3, "Yastık", "78", R.drawable.yastik));
-        productList.add(new Product(14, "Şeker", "78", R.drawable.seker));
-        productList.add(new Product(15, "Çikolata", "78", R.drawable.cikolata));
-        productList.add(new Product(16, "Bardak", "56", R.drawable.bardak));
-        productList.add(new Product(17, "Tshirt", "78", R.drawable.tshirt));
+        productList.add(new Product(1, "Ayıcık", "50" , R.drawable.ayicik));
+        productList.add(new Product(2, "Çiçek", "35", R.drawable.cicek));
+        productList.add(new Product(3, "Yastık", "20", R.drawable.yastik));
+        productList.add(new Product(14, "Şeker", "35", R.drawable.seker));
+        productList.add(new Product(15, "Çikolata", "25", R.drawable.cikolata));
+        productList.add(new Product(16, "Bardak", "20", R.drawable.bardak));
+        productList.add(new Product(17, "Tshirt", "30", R.drawable.tshirt));
         productList.add(new Product(18, "Ayakkabı", "45", R.drawable.ayakkabi));
-        productList.add(new Product(19, "Kolye", "78", R.drawable.kolye));
-        productList.add(new Product(11, "Kalem", "78", R.drawable.kalem));
+        productList.add(new Product(19, "Kolye", "40", R.drawable.kolye));
+        productList.add(new Product(11, "Kalem", "15", R.drawable.kalem));
 
         TestActivity.oneri=productList.get(0);
         ListAdapter adapter = new ListAdapter(productList);

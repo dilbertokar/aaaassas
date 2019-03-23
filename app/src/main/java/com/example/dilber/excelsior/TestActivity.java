@@ -24,6 +24,8 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     TextView cevap4;
     TextView cevap5;
 
+    TextView anadön;
+
     CardView card1;
     CardView card2;
     CardView card3;
@@ -74,6 +76,16 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
         cevap5.setOnClickListener(this);
 
         setQuestion();
+
+        anadön = findViewById(R.id.anadön);
+        anadön.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(TestActivity.this,UrunListe.class);
+                startActivity(i);
+
+            }
+        });
     }
 
 void setQuestion(){
