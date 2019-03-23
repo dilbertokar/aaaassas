@@ -65,6 +65,9 @@ public class SepetAdapter extends RecyclerView.Adapter<SepetAdapter.ViewHolder> 
                 toplamfiyat-=fiyat;
                 sepetlist.remove(position);
                 notifyDataSetChanged();
+                SepetActivity.toplam.setText("Toplam :"+toplamfiyat+"₺");
+                if(toplamfiyat==0)
+                    SepetActivity.odeme.setVisibility(View.GONE);
 
             }
         });
