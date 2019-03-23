@@ -2,147 +2,156 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/calis"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".TestActivity">
 
     <LinearLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/soru"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Soru"
             android:layout_margin="30dp"
-            android:textSize="20dp"/>
+            android:text="Soru"
+            android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card1"
-            android:layout_marginLeft="30dp"
-            android:layout_width="80dp"
-            android:layout_height="35dp"
-            android:elevation="82dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="#ffff"
-            app:cardUseCompatPadding="true"
+            <android.support.v7.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="82dp"
+                app:cardBackgroundColor="#ffff"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
 
-            >
+                >
 
-            <TextView
-                android:id="@+id/cevap1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Cevap1"
-                android:textColor="#000"
-                android:gravity="center"
-                android:clickable="true"/>
+                <TextView
+                    android:id="@+id/cevap1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="Cevap1"
+                    android:textColor="#000" />
 
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:id="@+id/card2"
-            android:layout_marginLeft="30dp"
-            android:layout_width="80dp"
-            android:layout_height="35dp"
-            android:elevation="82dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="#ffff"
-            app:cardUseCompatPadding="true"
-            >
+            </android.support.v7.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="#000"
-                android:text=""
-                android:id="@+id/cevap2"
-                android:gravity="center"
-                android:clickable="true"/>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="82dp"
+                app:cardBackgroundColor="#ffff"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
 
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:id="@+id/card3"
-            android:layout_marginLeft="30dp"
-            android:layout_width="80dp"
-            android:layout_height="35dp"
-            android:elevation="82dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="#ffff"
-            app:cardUseCompatPadding="true"
-            android:text="Cevap3"
-           >
+                <TextView
+                    android:id="@+id/cevap2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#000" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text=""
-                android:id="@+id/cevap3"
-                android:textColor="#000"
-                android:gravity="center"
-                android:clickable="true"/>
+            </android.support.v7.widget.CardView>
 
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:id="@+id/card4"
-            android:layout_marginLeft="30dp"
+            <android.support.v7.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="82dp"
+                android:text="Cevap3"
+                app:cardBackgroundColor="#ffff"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
 
-            android:layout_width="80dp"
-            android:layout_height="35dp"
-            android:elevation="82dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="#ffff"
-            app:cardUseCompatPadding="true"
-           >
+                <TextView
+                    android:id="@+id/cevap3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#000" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="cevap4"
-                android:id="@+id/cevap4"
-                android:textColor="#000"
-                android:gravity="center"
-                android:clickable="true"/>
+            </android.support.v7.widget.CardView>
 
-        </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="80dp"
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/card5"
-            android:layout_marginLeft="30dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="82dp"
+                app:cardBackgroundColor="#ffff"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
 
-            android:layout_width="80dp"
-            android:layout_height="35dp"
-            android:elevation="82dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="#ffff"
-            app:cardUseCompatPadding="true"
-            >
+                <TextView
+                    android:id="@+id/cevap4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="cevap4"
+                    android:textColor="#000" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="cevap5"
-                android:id="@+id/cevap5"
-                android:textColor="#000"
-                android:gravity="center"
-                android:clickable="true"/>
+            </android.support.v7.widget.CardView>
 
-        </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/card5"
+                android:layout_width="80dp"
+
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:elevation="82dp"
+                app:cardBackgroundColor="#ffff"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/cevap5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="cevap5"
+                    android:textColor="#000" />
+
+            </android.support.v7.widget.CardView>
         </LinearLayout>
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/anadön"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Anasayfaya dön"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
