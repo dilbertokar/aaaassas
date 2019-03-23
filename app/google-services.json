@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "659773355491",
+    "firebase_url": "https://excelsior-3896f.firebaseio.com",
+    "project_id": "excelsior-3896f",
+    "storage_bucket": "excelsior-3896f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659773355491:android:e9765185fced5531",
+        "android_client_info": {
+          "package_name": "com.example.dilber.excelsior"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659773355491-m6c59fk56k42kc9gr5iee7s7bcl0vhpm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dilber.excelsior",
+            "certificate_hash": "cdc5ec8992d87e19219273069ffed9fe66df4a3e"
+          }
+        },
+        {
+          "client_id": "659773355491-k4aievc20i7sr2d9tnmr6oeb63c54bi9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmyCztIMolgjFQFFicOiNd07iMBCYlkIA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659773355491-k4aievc20i7sr2d9tnmr6oeb63c54bi9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

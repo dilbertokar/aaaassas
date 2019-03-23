@@ -38,8 +38,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>  {
 
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_resource, parent, false);
         final ViewHolder view_holder = new ViewHolder(v);
-
-
         return view_holder;
     }
 
@@ -52,9 +50,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>  {
         holder.sepeteekle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sepet_activity.sepetlist.add(productList.get(position));
-
-
+                SepetActivity.sepetlist.add(productList.get(position));
             }
         });
 

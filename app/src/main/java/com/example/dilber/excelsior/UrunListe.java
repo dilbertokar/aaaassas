@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class UrunListe extends AppCompatActivity {
     ArrayList<Product> productList;
 
     ImageView sepeteekle;
+    Button test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,13 @@ public class UrunListe extends AppCompatActivity {
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
 
+        test = findViewById(R.id.btntest);
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 
@@ -65,7 +74,7 @@ public class UrunListe extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        Intent i=new Intent(UrunListe.this,sepet_activity.class);
+        Intent i=new Intent(UrunListe.this,SepetActivity.class);
         startActivity(i);
         return super.onOptionsItemSelected(item);
 

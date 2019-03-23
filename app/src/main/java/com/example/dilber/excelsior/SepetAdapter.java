@@ -15,6 +15,7 @@ public class SepetAdapter extends RecyclerView.Adapter<SepetAdapter.ViewHolder> 
         TextView name;
         ImageView image;
         TextView fiyat;
+        ImageView delete;
 
         public ViewHolder(View view) {
             super(view);
@@ -22,15 +23,8 @@ public class SepetAdapter extends RecyclerView.Adapter<SepetAdapter.ViewHolder> 
             name = view.findViewById(R.id.name);
             image = view.findViewById(R.id.image);
             fiyat = view.findViewById(R.id.txtfiyat);
-            ImageView  close=view.findViewById(R.id.imageView);
-            close.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int pos =getPosition();
+            delete = view.findViewById(R.id.delete);
 
-
-                }
-            });
 
         }
 
@@ -56,10 +50,17 @@ public class SepetAdapter extends RecyclerView.Adapter<SepetAdapter.ViewHolder> 
 
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.name.setText(sepetlist.get(position).getIsim());
         holder.fiyat.setText(sepetlist.get(position).getFiyat());
         holder.image.setImageResource(sepetlist.get(position).getResimId());
+        holder.delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sepetlist.remove(position);
+                notifyDataSetChanged();
+            }
+        });
 
     }
 

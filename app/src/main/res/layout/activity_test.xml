@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/soru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soru"
+            android:layout_margin="30dp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/cevap1"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:elevation="82dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#ffff"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cevap1"
+                android:textColor="#000"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/cevap2"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:elevation="82dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#ffff"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cevap2"
+                android:textColor="#000"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/cevap3"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:elevation="82dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#ffff"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Cevap3"
+                android:textColor="#000"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/cevap4"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:elevation="82dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#ffff"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="cevap4"
+                android:textColor="#000"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginLeft="30dp"
+            android:id="@+id/cevap5"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:elevation="82dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#ffff"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="cevap5"
+                android:textColor="#000"
+                android:gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
