@@ -1,11 +1,13 @@
 package com.example.dilber.excelsior;
 
+import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -45,12 +47,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>  {
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.name.setText(productList.get(position).getIsim());
-        holder.fiyat.setText(productList.get(position).getFiyat());
+        holder.fiyat.setText(productList.get(position).getFiyat()+"TL");
         holder.image.setImageResource(productList.get(position).getResimId());
         holder.sepeteekle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SepetActivity.sepetlist.add(productList.get(position));
+                Toast.makeText(v.getContext(), "Sepete Eklendi", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -65,4 +68,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>  {
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
     }
+
+    public void setFilter(ArrayList<Product> newlist){
+        productList = new ArrayList<>();
+        productList.addAll(newlist);
+        notifyDataSetChanged();
+    }
+
 }

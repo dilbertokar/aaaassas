@@ -36,11 +36,11 @@ public class UrunListe extends AppCompatActivity {
         sepeteekle = findViewById(R.id.basket);
 
         productList = new ArrayList<>();
-        productList.add(new Product(1, "Ayıcık", "5", R.drawable.ayicik));
+        productList.add(new Product(1, "Ayıcık", "5" , R.drawable.ayicik));
         productList.add(new Product(2, "Çiçek", "78", R.drawable.cicek));
         productList.add(new Product(3, "Yastık", "78", R.drawable.yastik));
-        productList.add(new Product(14, "Şeker", "78", R.drawable.icon));
-        productList.add(new Product(15, "Çikolata", "78", R.drawable.icon));
+        productList.add(new Product(14, "Şeker", "78", R.drawable.seker));
+        productList.add(new Product(15, "Çikolata", "78", R.drawable.cikolata));
         productList.add(new Product(16, "Bardak", "56", R.drawable.bardak));
         productList.add(new Product(17, "Tshirt", "78", R.drawable.tshirt));
         productList.add(new Product(18, "Ayakkabı", "45", R.drawable.ayakkabi));
@@ -80,13 +80,6 @@ public class UrunListe extends AppCompatActivity {
         startActivity(i);
         return super.onOptionsItemSelected(item);
 
-        /*
-        switch (item.getItemId()) {
-            case R.id.basket:
-                //Intent i = new Intent(UrunListe.this,SepetActivity.class);
-                return true;
-
-        }*/
     }
 
 }

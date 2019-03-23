@@ -1,5 +1,6 @@
 package com.example.dilber.excelsior;
 
+import android.content.Intent;
 import android.database.DataSetObserver;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -35,6 +37,18 @@ public class SepetActivity extends AppCompatActivity {
             odeme.setVisibility(View.GONE);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
+
+        odeme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SepetActivity.sepetlist.clear();
+                Toast.makeText(v.getContext(), "Ödeme Gerçekleşti", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(SepetActivity.this,UrunListe.class);
+                startActivity(i);
+                
+
+            }
+        });
 
     }
 }
